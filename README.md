@@ -33,10 +33,12 @@ commands for executing no_generator.c file
 
 > ./a 
 
- > Commands Used
- - For Compilation 
- - mpicc -g -Wall -o sort hyperquicksort.c -lm
+ - Commands Used
+  For Compilation 
+  
+ > mpicc -g -Wall -o sort hyperquicksort.c -lm
 
- - For Execution 
- - mpiexec -n num_procs ./sort inputfile outputfile
+ For Execution 
+ 
+ > mpiexec -n num_procs ./sort inputfile outputfile
  by this command the time which is required to run is also displayed
