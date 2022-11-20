@@ -8,6 +8,38 @@ int cmpfunc (const void * a, const void * b){
    return  *(int*)a >= *(int*)b ? 1 : -1;
 }
 
+void swap(int *a, int *b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+int partition(int array[], int low, int high) {
+  int pivot = array[high];
+  
+  int i = (low - 1);
+
+  for (int j = low; j < high; j++) {
+    if (array[j] <= pivot) {
+      i++;
+      swap(&array[i], &array[j]);
+    }
+  }
+  swap(&array[i + 1], &array[high]);
+  
+  return (i + 1);
+}
+
+void qkSort(int array[], int low, int high) {
+  if (low < high) {
+    int pi = partition(array, low, high);
+    
+    qkSort(array, low, pi - 1);
+    
+    qkSort(array, pi + 1, high);
+  }
+}
+
 int main(int argc, char** argv){
     int n, local_n, comm_sz, world_rank, logp, median, pivot;
     int *A, *local_A, *recv_buf, *merge_buf;
