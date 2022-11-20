@@ -27,9 +27,16 @@ Here I had implemented the Hyperquick Sort or simply the quick sort which run on
 - Gather elements from all processes into process 0 and output to file
 
 
+## before starting create txt files of name inputfile && outputfile and run the no_generator.c code to generate the numbers to be sorted
+> commands for executing no_generator.c file
+g++ no_generator.c -o a
+
+./a 
+
  > Commands Used
  - For Compilation 
  - mpicc -g -Wall -o sort hyperquicksort.c -lm
 
  - For Execution 
  - mpiexec -n num_procs ./sort inputfile outputfile
+ by this command the time which is required to run is also displayed
