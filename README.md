@@ -41,4 +41,5 @@ commands for executing no_generator.c file
  For Execution 
  
  > mpiexec -n num_procs ./sort inputfile.txt outputfile.txt
- by this command the time which is required to run is also displayed
+ 
+    by this command the time which is required to run is also displayed
