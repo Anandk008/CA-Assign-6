@@ -1,9 +1,9 @@
-# CA-Assign-6
+## Computer Algorithm Assignment on Hyperquick sort 
 
 Here I had implemented the Hyperquick Sort or simply the quick sort which run on many processors on  processors and ultimately it requires lesser time than any serial quicksort
 
 
-# Procedure : 
+## Procedure : 
 
 - read input /process 0
 
@@ -14,9 +14,9 @@ Here I had implemented the Hyperquick Sort or simply the quick sort which run on
 - iterate log p times: - 
 
 - create communicator based on process rank and number of iterations 
--    in ith iteration there will be 2i groups of processes or communicaors 
--    also compute the local rank of each process  use MPI Comm split() 
--    process 0 will broadcast its median 
+    in ith iteration there will be 2i groups of processes or communicaors 
+    also compute the local rank of each process  use MPI Comm split() 
+    process 0 will broadcast its median 
 - each process will divide local array into low and high partitioned by median 
 - each process in upper half will swap its low list with high list of corresponding
 
@@ -27,11 +27,11 @@ Here I had implemented the Hyperquick Sort or simply the quick sort which run on
 - Gather elements from all processes into process 0 and output to file
 
 
-## before starting create txt files of name inputfile && outputfile and run the no_generator.c code to generate the numbers to be sorted
-> commands for executing no_generator.c file
-g++ no_generator.c -o a
+# Before starting create txt files of name inputfile && outputfile and run the no_generator.c code to generate the numbers to be sorted
+commands for executing no_generator.c file
+> g++ no_generator.c -o a
 
-./a 
+> ./a 
 
  > Commands Used
  - For Compilation 
