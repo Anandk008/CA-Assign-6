@@ -9,7 +9,7 @@ Here I had implemented the Hyperquick Sort or simply the quick sort which run on
 
 - scatter the input data MPI Scatter ()
 
-- Sort each local array for each process using stl qsort ()
+- Sort each local array for each process using qksort ()
 
 - iterate log p times: - 
 
